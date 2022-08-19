@@ -7,6 +7,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from '../material.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  {
+    path: '',
+    loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
+  },
+  {
+    path: '',
+    loadChildren: () => import('./user/user.module').then((m) => m.UserModule),
+  },
+];
 
 @NgModule({
   declarations: [AppComponent, NavbarComponent],
@@ -17,6 +29,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
+    RouterModule.forRoot(routes),
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -3,7 +3,7 @@
     mat-icon-button
     class="icon"
     aria-label="Example icon-button with menu icon"
-    (click)="sidenav.toggle()"
+    (click)="openSideNav()"
   >
     <mat-icon>menu</mat-icon>
   </button>
@@ -29,5 +29,7 @@
   <mat-sidenav #sidenav
     ><button>Start</button><button>Lets go</button></mat-sidenav
   >
-  <mat-sidenav-content> </mat-sidenav-content>
+  <mat-sidenav-content>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
 </mat-sidenav-container>

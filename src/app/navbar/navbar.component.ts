@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { UiService } from '../services/ui.service';
 
@@ -8,20 +8,17 @@ import { UiService } from '../services/ui.service';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
-  @Output() onAddMeal: EventEmitter<boolean> = new EventEmitter();
-  sideNavOpen: boolean = false;
-  uiSubscription: Subscription;
-  events: string[] = [];
+  @ViewChild('sidenav') SideNav: any;
 
-  constructor(private uiService: UiService) {}
+  constructor() {}
 
-  ngOnInit(): void {
-    this.uiSubscription = this.uiService
-      .onToggle()
-      .subscribe((value) => (this.sideNavOpen = value));
-  }
+  ngOnInit(): void {}
 
   openSideNav() {
-    this.uiService.toggleSideNav();
+    if (this.SideNav.opened) {
+      this.SideNav.close();
+    } else {
+      this.SideNav.open();
+    }
   }
 }
