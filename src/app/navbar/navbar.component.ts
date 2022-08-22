@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { Subscription } from 'rxjs';
-import { UiService } from '../services/ui.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -10,7 +9,7 @@ import { UiService } from '../services/ui.service';
 export class NavbarComponent implements OnInit {
   @ViewChild('sidenav') SideNav: any;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
 
@@ -20,5 +19,9 @@ export class NavbarComponent implements OnInit {
     } else {
       this.SideNav.open();
     }
+  }
+
+  goToUsers() {
+    this.router.navigateByUrl('/users');
   }
 }

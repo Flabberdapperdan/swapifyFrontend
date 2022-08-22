@@ -5,3 +5,8 @@
 mat-toolbar > * {
   color: white;
 }
+
+.sidenav-button-container {
+  display: flex;
+  flex-direction: column;
+}

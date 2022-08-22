@@ -1,7 +1,43 @@
-<div id="home-container">
-  <mat-tab-group color="accent">
-    <mat-tab label="First"> Content 1 </mat-tab>
-    <mat-tab label="Second"> Content 2 </mat-tab>
-    <mat-tab label="Third"> Content 3 </mat-tab>
+<div class="tab-widget-container">
+  <mat-tab-group color="primary" [disableRipple]="true" mat-stretch-tabs>
+    <mat-tab label="Stap 1">
+      <div class="tab-content-container tab-1">
+        <span class="material-symbols-outlined tab-arrow-left">
+          chevron_left
+        </span>
+        <span class="spacer"></span>
+        <h1>Maak een account.</h1>
+        <span class="spacer"></span>
+        <span class="material-symbols-outlined tab-arrow-right">
+          chevron_right
+        </span>
+      </div>
+    </mat-tab>
+    <mat-tab label="Stap 2"
+      ><div class="tab-content-container tab-2">
+        <span class="material-symbols-outlined tab-arrow-left">
+          chevron_left
+        </span>
+        <span class="spacer"></span>
+        <h1>Meld je aan voor een tas.</h1>
+        <span class="spacer"></span>
+        <span class="material-symbols-outlined tab-arrow-right">
+          chevron_right
+        </span>
+      </div>
+    </mat-tab>
+    <mat-tab label="Stap 3">
+      <div class="tab-content-container tab-3">
+        <span class="material-symbols-outlined tab-arrow-left">
+          chevron_left
+        </span>
+        <span class="spacer"></span>
+        <h1>Wacht op je tas en doe mee!</h1>
+        <span class="spacer"></span>
+        <span class="material-symbols-outlined tab-arrow-right">
+          chevron_right
+        </span>
+      </div>
+    </mat-tab>
   </mat-tab-group>
 </div>

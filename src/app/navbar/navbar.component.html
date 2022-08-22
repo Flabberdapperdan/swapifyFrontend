@@ -26,10 +26,17 @@
 </mat-toolbar>
 
 <mat-sidenav-container>
-  <mat-sidenav #sidenav
-    ><button>Start</button><button>Lets go</button></mat-sidenav
-  >
+  <mat-sidenav #sidenav color="primary">
+    <div class="sidenav-button-container">
+      <button color="accent" mat-button>Gebruikers</button>
+      <button color="accent" mat-button>Lets go</button>
+    </div>
+  </mat-sidenav>
   <mat-sidenav-content>
-    <ng-content></ng-content>
+    <div class="main-container">
+      <div class="main">
+        <ng-content></ng-content>
+      </div>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
