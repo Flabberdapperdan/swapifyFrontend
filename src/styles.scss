@@ -3,7 +3,7 @@
 @include mat.core();
 
 $swapify-primary: mat.define-palette(mat.$green-palette);
-$swapify-accent: mat.define-palette(mat.$purple-palette, A200, A100, A400);
+$swapify-accent: mat.define-palette(mat.$deep-purple-palette, A200, A100, A400);
 
 $swapify-warn: mat.define-palette(mat.$red-palette);
 

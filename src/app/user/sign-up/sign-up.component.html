@@ -1,0 +1,140 @@
+<div id="sign-up-container">
+  <div id="sign-up-stepper">
+    <mat-stepper [linear]="false" #stepper id="sign-up-stepper">
+      <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup">
+          <ng-template matStepLabel>Naam</ng-template>
+          <div class="input-container">
+            <mat-form-field appearance="fill">
+              <mat-label>Naam</mat-label>
+              <input
+                matInput
+                placeholder="Teuntje"
+                formControlName="firstName"
+                required
+              />
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>Achternaam</mat-label>
+              <input
+                matInput
+                placeholder="van Doedel"
+                formControlName="lastName"
+                required
+            /></mat-form-field>
+          </div>
+          <div>
+            <button color="accent" mat-raised-button matStepperNext>
+              Volgende
+            </button>
+          </div>
+        </form>
+      </mat-step>
+
+      <mat-step [stepControl]="secondFormGroup" label="Address">
+        <form [formGroup]="secondFormGroup">
+          <div class="input-container">
+            <mat-form-field appearance="fill">
+              <mat-label>Address</mat-label>
+              <input
+                matInput
+                formControlName="street"
+                placeholder="Van Iddekingweg"
+                required
+              />
+            </mat-form-field>
+            <div id="house-number-container">
+              <mat-form-field appearance="fill">
+                <mat-label>Huisnummer</mat-label>
+                <input
+                  matInput
+                  formControlName="houseNumber"
+                  placeholder="73"
+                  required
+                />
+              </mat-form-field>
+              <mat-form-field appearance="fill">
+                <mat-label>Extensie</mat-label>
+                <input matInput formControlName="extension" placeholder="C" />
+              </mat-form-field>
+            </div>
+            <mat-form-field appearance="fill">
+              <mat-label>Postcode</mat-label>
+              <input
+                matInput
+                formControlName="postalCode"
+                placeholder="9723RT"
+                required
+              />
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>Stad</mat-label>
+              <input
+                matInput
+                formControlName="city"
+                placeholder="Groningen"
+                required
+              />
+            </mat-form-field>
+          </div>
+          <div>
+            <button color="accent" mat-raised-button matStepperPrevious>
+              Vorige
+            </button>
+            <button color="accent" mat-raised-button matStepperNext>
+              Volgende
+            </button>
+          </div>
+        </form>
+      </mat-step>
+
+      <mat-step [stepControl]="secondFormGroup" label="Soort">
+        <form [formGroup]="thirdFormGroup">
+          <div class="input-container">
+            <mat-form-field appearance="fill">
+              <mat-label>Address</mat-label>
+              <input
+                matInput
+                formControlName="sizeId"
+                placeholder="Van Iddekingweg"
+                required
+              />
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>Postcode</mat-label>
+              <input
+                matInput
+                formControlName="genderId"
+                placeholder="9723RT"
+                required
+              />
+            </mat-form-field>
+          </div>
+          <div>
+            <button color="accent" mat-raised-button matStepperPrevious>
+              Vorige
+            </button>
+            <button color="accent" mat-raised-button matStepperNext>
+              Volgende
+            </button>
+          </div>
+        </form>
+      </mat-step>
+
+      <mat-step>
+        <div class="input-container" id="stepper-last-step">
+          <ng-template matStepLabel>Done</ng-template>
+          <h3>Je bent klaar!</h3>
+          <div>
+            <button color="accent" mat-raised-button matStepperPrevious>
+              Terug
+            </button>
+            <button color="primary" mat-raised-button (click)="submit()">
+              Opsturen
+            </button>
+          </div>
+        </div>
+      </mat-step>
+    </mat-stepper>
+  </div>
+</div>
