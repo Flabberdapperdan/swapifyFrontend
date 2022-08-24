@@ -37,3 +37,13 @@ body {
 .main {
   width: 90vw;
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.paginator {
+  margin: 10px 0;
+  box-shadow: 1px 1px 15px;
+}

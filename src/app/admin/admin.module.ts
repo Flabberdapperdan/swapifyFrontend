@@ -4,7 +4,7 @@ import { AdminComponent } from './admin.component';
 import { RouterModule, Routes } from '@angular/router';
 import { MaterialModule } from 'src/material.module';
 
-const routes: Routes = [{ path: 'admin', component: AdminComponent }];
+const routes: Routes = [{ path: 'admins', component: AdminComponent }];
 
 @NgModule({
   declarations: [AdminComponent],

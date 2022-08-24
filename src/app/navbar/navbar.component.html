@@ -28,8 +28,12 @@
 <mat-sidenav-container>
   <mat-sidenav #sidenav color="primary">
     <div class="sidenav-button-container">
-      <button color="accent" mat-button>Gebruikers</button>
-      <button color="accent" mat-button>Lets go</button>
+      <button color="accent" (click)="goToUsers()" mat-button>
+        Gebruikers
+      </button>
+      <button color="accent" (click)="goToAdmins()" mat-button>
+        Beheerder
+      </button>
     </div>
   </mat-sidenav>
   <mat-sidenav-content>

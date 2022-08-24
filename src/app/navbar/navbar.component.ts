@@ -23,5 +23,10 @@ export class NavbarComponent implements OnInit {
 
   goToUsers() {
     this.router.navigateByUrl('/users');
+    this.SideNav.close();
+  }
+  goToAdmins() {
+    this.router.navigateByUrl('/admins');
+    this.SideNav.close();
   }
 }
